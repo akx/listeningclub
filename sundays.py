@@ -1,6 +1,6 @@
 import datetime
 
-d = datetime.date(2010, 1, 1)
+d = datetime.date(2019, 1, 1)
 
 while True:
 	if d.isoweekday() == 7:
