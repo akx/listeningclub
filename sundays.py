@@ -1,8 +1,8 @@
 import datetime
 
-d = datetime.date(2021, 1, 1)
+d = datetime.date(2022, 1, 1)
 
-while d.year == 2021:
+while d.year == 2022:
 	if d.isoweekday() == 7:
 		print(d.isoformat(), "-", "-", "-", sep="\t")
 	d += datetime.timedelta(days=1)
