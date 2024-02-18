@@ -91,7 +91,7 @@ Date: 2023-10-29
 22 M. Ward - War & Peace (@saucer)
 23 Cat Power - What The World Needs Now (Lyrics) (@holette)
 24 Team Scheisse, SFR - FA (@AqiDrago)
-25 Mitchirineko March (@akx)
+25 Mitchirineko Cats - Mitchirineko March (@akx)
 
 #TapasSneakersAndGiantPuppetsVortex
 Date: 2023-09-24
@@ -381,14 +381,14 @@ Date: 2023-01-08
 Date: 2022-11-27
 
 01 Wagon Christ - Hello - @kleptones@mastodon.social
-02 (snippet from Dave Soldier & Richard Lair - Thai Elephant Orchestra - Ken's Wind Instrument)
+02 Dave Soldier & Richard Lair - Thai Elephant Orchestra - Ken's Wind Instrument (snippet from)
 03 Guns N' Roses - Welcome To The Jungle - @simonlandmine@mastodon.social
 04 Blackalicious - Do This My Way - @nessiest@mastodon.social
-05 (snippet from Dave Soldier & Richard Lair - Thai Elephant Orchestra - Trio For Theramin & Electric Keyboard)
+05 Dave Soldier & Richard Lair - Thai Elephant Orchestra - Trio For Theramin & Electric Keyboard (snippet from)
 06 The Doors - Hello, I Love You - @zensolo@kolektiva.social + @faberfador@mastodon.social + @corin_ja@mastodon.lol
 07 King Crimson - Elephant Talk - @kleptones@mastodon.social
 08 Marlon Williams - Hello Miss Lonesome - @nessiest@mastodon.social
-09 (snippet from Dave Soldier & Richard Lair - Thai Elephant Orchestra - Elephant Field Recordings)
+09 Dave Soldier & Richard Lair - Thai Elephant Orchestra - Elephant Field Recordings (snippet from)
 10 Elephant Revival - Spinning - @akx@mastodon.social
 11 Shakespeare's Sister - Hello (Turn Your Radio On) - @simonlandmine@mastodon.social
 12 Elephanz - Maryland - @alluuna@twitter.com
@@ -399,7 +399,7 @@ Date: 2022-11-27
 17 Otis Redding - A Change Is Gonna Come - @zensolo@kolektiva.social
 18 Mastodon - Joseph Merrick - @corin_ja@mastodon.lol
 19 Nazz - Hello, It's Me - @saucer@mastodon.social
-20 (full track - Dave Soldier & Richard Lair - Thai Elephant Orchestra - Trio for Theramin & Electric Keyboard)
+20 Dave Soldier & Richard Lair - Thai Elephant Orchestra - Trio for Theramin & Electric Keyboard (full track)
 
 #timevortex
 Date: 2022-10-30
@@ -530,28 +530,28 @@ Date: 2022-06-26
 #themetunevortex
 Date: 2022-05-29
 
-01 @Ohmyliver - Papernut Cambridge / Luke Smith & The Feelings - Hooky Street (Long Version) [Only Fools and Horses]
-02 @JimMcCauley - Mountain - Nantucket Sleighride [Weekend World]
-03 @brainspiritus - Taj Mahal - She Caught the Katy and Left Me a Mule to Ride [The Blues Brothers]
-04 @wojsvenwoj - Nerf Herder - Buffy The Vampire Slayer Theme [Buffy The Vampire Slayer]
-05 @iamwahl - Jace Everett - Bad Things [True Blood]
-06 @Ohmyliver - R-Tyme - R-Theme (Dramatic Mix) (gently edited)
-07 @JimMcCauley - The KLF - Doctorin' The Tardis [Doctor... Who?]
-08 @zensolo - Henry Mancini and His Orchestra - Experiment in Terror (Twist) [Experiment in Terror]
-09 @zbendr - Tokyo Ska Paradise Orchestra - Theme from The Godfather [The Godfather]
-10 @akx - Noisia - Tommy's Theme
-11 @brainspiritus - Tadashi Kimijima / Peter Clarke - Bubble Bobble Theme [Bubble Bobble, C64]
-12 @zbendr - Tokyo Ska Paradise Orchestra - Incredible Crisis Opening Theme [Incredible Crisis]
-13 @kleptones - Mike Post - Hill Street Blues [Hill Street Blues]
-14 @iamwahl - Choir of Young Believers - Hollow Talk [The Bridge]
-15 @akx - Joe Hisaishi / Yoshikazu Mera - Mononoke Hime (Vocal Version) [Princess Mononoke OST]
-16 @kleptones - Johnny Hawksworth - Roobarb [Roobarb]
-17 @zensolo - Terry Adams & NRBQ - Simpsons Theme [The Simpsons]
-18 @nessiest - Michael Nyman - The Heart Asks Pleasure First [The Piano]
-19 @alluuna - The Good, The Bad And The Ugly (Theme) [The Good, The Bad And The Ugly]
-20 @wojsvenwoj - Royal Philharmonic Orchestra, Carl Davis & Ronald Binge - Sailing By [BBC 4 Shipping Forecast]
-21 @nessiest - Alan Hawkshaw - Chicken Man [Grange Hill]
-22 RIP - Vangelis - Alpha
+01 Papernut Cambridge/Luke Smith & The Feelings - Hooky Street (Long Version) [Only Fools and Horses] (@Ohmyliver)
+02 Mountain - Nantucket Sleighride [Weekend World] (@JimMcCauley)
+03 Taj Mahal - She Caught the Katy and Left Me a Mule to Ride [The Blues Brothers] (@brainspiritus)
+04 Nerf Herder - Buffy The Vampire Slayer Theme [Buffy The Vampire Slayer] (@wojsvenwoj)
+05 Jace Everett - Bad Things [True Blood] (@iamwahl)
+06 R-Tyme - R-Theme (Dramatic Mix) (gently edited) (@Ohmyliver)
+07 The KLF - Doctorin' The Tardis [Doctor... Who?] (@JimMcCauley)
+08 Henry Mancini and His Orchestra - Experiment in Terror (Twist) [Experiment in Terror] (@zensolo)
+09 Tokyo Ska Paradise Orchestra - Theme from The Godfather [The Godfather] (@zbendr)
+10 Noisia - Tommy's Theme (@akx)
+11 Tadashi Kimijima/Peter Clarke - Bubble Bobble Theme [Bubble Bobble, C64] (@brainspiritus)
+12 Tokyo Ska Paradise Orchestra - Incredible Crisis Opening Theme [Incredible Crisis] (@zbendr)
+13 Mike Post - Hill Street Blues [Hill Street Blues] (@kleptones)
+14 Choir of Young Believers - Hollow Talk [The Bridge] (@iamwahl)
+15 Joe Hisaishi/Yoshikazu Mera - Mononoke Hime (Vocal Version) [Princess Mononoke OST] (@akx)
+16 Johnny Hawksworth - Roobarb [Roobarb] (@kleptones)
+17 Terry Adams & NRBQ - Simpsons Theme [The Simpsons] (@zensolo)
+18 Michael Nyman - The Heart Asks Pleasure First [The Piano] (@nessiest)
+19 Ennio Morricone - The Good, The Bad And The Ugly (Theme) [The Good, The Bad And The Ugly] (@alluuna)
+20 Royal Philharmonic Orchestra, Carl Davis & Ronald Binge - Sailing By [BBC 4 Shipping Forecast] (@wojsvenwoj)
+21 Alan Hawkshaw - Chicken Man [Grange Hill] (@nessiest)
+22 Vangelis - Alpha (RIP)
 
 #renewalvortex
 Date: 2022-04-24
@@ -643,10 +643,10 @@ Date: 2022-01-30
 10 Mudhoney / Touch Me I'm Sick (@ohmyliver)
 11 Quarashi / Stick 'Em Up (@faberfedor)
 12 Boris / Anti-Gone (@saucer)
-13 Noisa/ Stigma (@akx)
-14 Van Pletzen/ Die Beats Amazing (@brainspiritus)
+13 Noisia / Stigma (@akx)
+14 Van Pletzen / Die Beats Amazing (@brainspiritus)
 15 Flux Pavilion / Night Goes On (@akx)
-16 Rusko/ Cockney Thug (@ohmyliver)
+16 Rusko / Cockney Thug (@ohmyliver)
 17 Carter USM / Surfing USM (@jimmccauley)
 18 Gogol Bordello / Suddenly... (I Miss Carparty) (@wojsvenwoj)
 19 Toy Dolls / Nellie the Elephant (@simonlandmine)
@@ -788,7 +788,7 @@ Date: 2021-08-29
 07. Molly Nilson - Hey Moon (@saucer)
 08. Jonathan King - Everyone's Been To The Moon (@kleptones)
 09. Royksopp - In Space (@akx)
-10 - @holette - Idris Muhammad Could Heaven Ever Be Like This (edit)
+10. Idris Muhammad - Could Heaven Ever Be Like This (edit) (@holette)
 11. The Rolling Stones - 2000 Light Years From Home (@ohmyliver)
 12. Leevi & The Leavings - Pohjois-Karjala (@alluuna)
 13. Inspiral Carpets - Sackville (@saucer)
@@ -1279,8 +1279,7 @@ Date: 2016-02-28
 09 Scritti Politti - Jacques Derrida (@cdrose_writer)
 10 Prince - Alphabet Street (@holette)
 11 Robbie Williams - Rock DJ (@holette)
-12 Charles Augins, Danny John-Jules, Kevin Clash and Richard Bodkin, featuring David Bowie - Chilly Down
-(@mrhig)
+12 Charles Augins, Danny John-Jules, Kevin Clash and Richard Bodkin, featuring David Bowie - Chilly Down (@mrhig)
 
 #bowievortex
 Date: 2016-01-31
@@ -1681,7 +1680,7 @@ Handshaker by Martyn Bennett and Martin Lowe @mutster101
 Beside The Fountain by Handsomeboy Technique @akx
 TOODOO by Mr Oizo (feat. Carmen Castro) @jonnydapigg
 Velocet Vir Nesat by Eat Lights Become Lights @cdrose_writer 
-Outro, oliver/george carlin 
+Outro by oliver/george carlin
 Donkey by Los Beta @kleptones
 
 #exquisitecorpsevortex
@@ -1700,14 +1699,13 @@ Donkey by Los Beta @kleptones
 
 07 Guillemots - Trains To Brazil - @holette - "It could have gone into the missing you maudlin territory after the last one but I've chosen to pick up on the euphoric, chuck everything at it feeling. This track has it in spades. Once downloaded the lyrics and tried to sing along to it when drunk with a friend. It's actually quite a complex melody and we made a right old mauling of it. But then so did Guillemots themselves when I saw them live. Maybe they were drunk too."
 
-08 Nat King Cole - (Get Your Kicks On) Route 66 - @mutster101 - "OK, I have three different ways of linking the two songs. The two things I picked up getting the track were the title having a travel theme, and the brass in it. As it turns out the track I've picked didn't have as much brass to it as I remembered (blink and you miss it), so let's forget that one, even though brass is automatically associated with jazz. So, there is the travel theme, which is a good theme to pick up on since I'm about to go off travelling. Or, in the style of the Tedious Link on the Chris Moyles drive time show... Musically the track I was sent reminded me of Valerie by Amy Winehouse.
-Steve Winwood also recorded a track called Valerie. And he recorded a track called Higher Love. Depeche Mode also did a track called Higher Love AND they covered the track I'm sending. Tenuous and complex, but that's part of the fun :)"
+08 Nat King Cole - (Get Your Kicks On) Route 66 - @mutster101 - "OK, I have three different ways of linking the two songs. The two things I picked up getting the track were the title having a travel theme, and the brass in it. As it turns out the track I've picked didn't have as much brass to it as I remembered (blink and you miss it), so let's forget that one, even though brass is automatically associated with jazz. So, there is the travel theme, which is a good theme to pick up on since I'm about to go off travelling. Or, in the style of the Tedious Link on the Chris Moyles drive time show... Musically the track I was sent reminded me of Valerie by Amy Winehouse. Steve Winwood also recorded a track called Valerie. And he recorded a track called Higher Love. Depeche Mode also did a track called Higher Love AND they covered the track I'm sending. Tenuous and complex, but that's part of the fun :)"
 
 09 David Ford - Song For The Road (Live Studio Version) - @rougeforever - "Route 66 is all about seeking adventure on the highway - Song For The Road is for those of us who already know that happiness and adventure lies at home."
 
 10 The Beatles - You Know What To Do - @jonnydapigg - "Purely dj'ing the mixtape here, perking up the tempo from the previous track a little while maintaining a nice chilled vibe. as soon as i heard the track i knew the intro of this would fit the end nicely. also this song is pure mixtape material, lovely little memorable number that no one really knows (even though it's the beatles)."
 
-11 Franz Ferdinand - 11 Do You Want to (Pom Pom Glam Re-Edit) - @cakehugga - "The song I was sent is "You know what to do" so I went with a song which started with the word Do- which made me think of "Do you want to?" by Franz Ferdinand. It always gets me dancing / stomping around the dancefloor. Catchy. I've chosen the "Pom Pom Glam Re-edit" which Jaye did for a friends 40th birthday. Has a nice build on it."
+11 Franz Ferdinand - Do You Want to (Pom Pom Glam Re-Edit) - @cakehugga - "The song I was sent is "You know what to do" so I went with a song which started with the word Do- which made me think of "Do you want to?" by Franz Ferdinand. It always gets me dancing and stomping around the dancefloor. Catchy. I've chosen the "Pom Pom Glam Re-edit" which Jaye did for a friends 40th birthday. Has a nice build on it."
 
 12 The Knack - My Sharona - @cdrose_writer - "Not an inspired choice, perhaps, but just sooo obvious..."
 
@@ -1997,7 +1995,7 @@ Steve Winwood also recorded a track called Valerie. And he recorded a track call
 
 00001 : Justice - DVNO // @jonnydapigg
 00002 : Aphex Twin - Come To Daddy // @monkeytypes
-00003 : FANG ISLAND GO TO KINDERGARDEN // @neilpbardhan
+00003 : FANG ISLAND - FANG ISLAND GO TO KINDERGARDEN // @neilpbardhan
 00004 : OK Go - Needing : Getting // @tibieryo
 00005 : GESAFFELSTEIN - PURSUIT // @Jayesofine
 00006 : The Cooper Temple Clause - Blind Pilots 
@@ -2010,20 +2008,20 @@ Steve Winwood also recorded a track called Valerie. And he recorded a track call
 
 #SUMMERVORTEX
 
-jayesofine - Hookworms - Away/Towards
-jonnydapigg - Hybrid - ???
-faberfedor - Johnny & Edgar Winter - Bony Maronie
-akx - Tom Waits - Dirt In The Ground (from Glitter & Doom Live)
-tibieryo - Warren Zevon - The Indifference Of Heaven
-neilpbardhan - Mono Puff - The Devil Went Down To Newport
-eastvanhalen - Cheap Trick - Surrender (Live At Budokan)
-jimmccauley - Ten Years After - I'm Going Home (live at Woodstock)
-samsmitter - Sam Cooke - Somebody Have Mercy (Live At The Harlem Square)
-cakehugga - No Doubt - Just A Girl (Live At The Astoria, London)
-pamac66 - Dr.Feelgood - Going Back Home (Live At The Kursaal, Southend 1975)
-monkeytypes - Super Furry Animals - The Man Don't Give A Fuck (Live At Hammersmith Apollo)
-holette - Underworld - Rez/Cowgirl (live at Reading)
-kleptones - Van Morrison - Cyprus Avenue (Live At The Rainbow 1973)
+Hookworms - Away/Towards (@jayesofine)
+Hybrid - ??? (@jonnydapigg)
+Johnny & Edgar Winter - Bony Maronie (@faberfedor)
+Tom Waits - Dirt In The Ground (from Glitter & Doom Live) (@akx)
+Warren Zevon - The Indifference Of Heaven (@tibieryo)
+Mono Puff - The Devil Went Down To Newport (@neilpbardhan)
+Cheap Trick - Surrender (Live At Budokan) (@eastvanhalen)
+Ten Years After - I'm Going Home (live at Woodstock) (@jimmccauley)
+Sam Cooke - Somebody Have Mercy (Live At The Harlem Square) (@samsmitter)
+No Doubt - Just A Girl (Live At The Astoria, London) (@cakehugga)
+Dr.Feelgood - Going Back Home (Live At The Kursaal, Southend 1975) (@pamac66)
+Super Furry Animals - The Man Don't Give A Fuck (Live At Hammersmith Apollo) (@monkeytypes)
+Underworld - Rez/Cowgirl (live at Reading) (@holette)
+Van Morrison - Cyprus Avenue (Live At The Rainbow 1973) (@kleptones)
 
 #eastervortex2013
 
