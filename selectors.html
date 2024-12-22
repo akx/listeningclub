@@ -28,6 +28,11 @@
 
     const aliases = {
         "@wojsvenwoj": "@woj",
+        "@101retstum": "@mutster101",
+        "@jonny_pigg": "@jonnydapigg",
+        "@samquitter": "@samsmitter",
+        "@jimmmccauley": "@jimmccauley",
+        "@ohmyliver": "@ogili",
     }
 
     function formatInteger(num) {
@@ -67,7 +72,7 @@
             thisSnv.set(selector, thisSnv.get(selector) + 1);
         };
         for (const [selector, date] of await fetchSelectorsFromEntries()) {
-            add((aliases[selector] ?? selector).replaceAll("@", ""), date);
+            add((aliases[selector.toLowerCase()] ?? selector).replaceAll("@", ""), date);
         }
         const selectorsByCanonicalName = new Map();
         // Map `selectors` by choosing the most popular variant as the canonical name
