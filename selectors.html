@@ -85,10 +85,7 @@
 
     let selectors = new Map();
 
-    function update() {
-        const sortOrder = document.querySelector("input[name=sort]:checked").value;
-        const tbody = document.querySelector("#selectors tbody");
-        tbody.innerHTML = "";
+    function createRows() {
         const items = [];
         let totalN = 0;
         for (const [selector, dates] of selectors.entries()) {
@@ -120,60 +117,39 @@
             weeksSinceLastTd.textContent = formatInteger(weeksSinceLast);
             tr.appendChild(weeksSinceLastTd);
 
-            Object.assign(tr.dataset, {lastDate, firstDate, daysSinceLast, count, selector});
+            Object.assign(tr.dataset, {lastDate, firstDate, daysSinceLast, weeksSinceLast, count, selector});
             items.push(tr);
             totalN += count;
         }
         document.getElementById("outof").textContent = `out of ${formatInteger(totalN)}`;
+        return items;
+    }
+
+    function update() {
+        const sortOrder = document.querySelector("input[name=sort]:checked").value;
+        const tbody = document.querySelector("#selectors tbody");
+        let items = Array.from(tbody.querySelectorAll("tr"));
+        if(!items.length) items = createRows();
+
         items.sort((a, b) => {
-            if (sortOrder === "recency") {
-                return a.dataset.daysSinceLast - b.dataset.daysSinceLast;
-            } else {
-                return b.dataset.count - a.dataset.count;
+            const ka = a.dataset[sortOrder];
+            const kb = b.dataset[sortOrder];
+            if (sortOrder === "count" || sortOrder === "daysSinceLast" || sortOrder === "weeksSinceLast") {
+                let val = (0 | ka) - (0 | kb);
+                if (sortOrder === "count") val = -val; // "DWIM" for count
+                return val;
             }
+            return String(ka).localeCompare(String(kb));
         });
         for (const li of items) {
             tbody.appendChild(li);
         }
     }
 
-	function compareValues(a, b) {
-		// return -1/0/1 based on what you "know" a and b
-		// are here. Numbers, text, some custom case-insensitive
-		// and natural number ordering, etc. That's up to you.
-		// A typical "do whatever JS would do" is:
-		let A = a?.replace(/,/g,'');
-		let B = b?.replace(/,/g,'');
-		if (!isNaN(A) && !isNaN(B)) return A - B;
-		return (A<B) ? -1 : (A>B) ? 1 : 0;
-	}
-
-	function sortTable(colnum) {
-		// get all the rows in this table:
-		const table = document.querySelector(`tbody`);
-		const tbody = document.querySelector("#selectors tbody");
-		let rows = Array.from(document.querySelectorAll(`tr`));
-
-		// but ignore the heading row:
-		//rows = rows.slice(1);
-
-		// set up the queryselector for getting the indicated
-		// column from a row, so we can compare using its value:
-		let qs = `td:nth-child(${colnum})`;
-
-		// and then just... sort the rows:
-		rows.sort( (r1,r2) => {
-			// get each row's relevant column
-			let t1 = r1?.querySelector(qs);
-			let t2 = r2?.querySelector(qs);
-
-			// and then effect sorting by comparing their content:
-			return compareValues(t1?.textContent,t2?.textContent);
-		});
-
-		// and then the magic part that makes the sorting appear on-page:
-		rows.forEach(row => table.appendChild(row));
-	}
+    function setSort(sort) {
+        document.querySelector(`input[name=sort][value=${sort}]`).checked = true;
+        update();
+    }
 
     async function init() {
         selectors = await loadData();
@@ -210,7 +186,7 @@
         padding: 0.2em;
     }
 
-    tr:hover td {
+    tr:hover td, th:hover {
         background-color: #f8f8f8;
     }
 
@@ -219,12 +195,9 @@
         font-variant: tabular-nums;
     }
 
-		.sortable {
-			cursor: pointer;
-		}
-
     th {
         vertical-align: bottom;
+        cursor: pointer;
         text-align: left;
     }
 
@@ -241,17 +214,21 @@
 </style>
 <body onload="init()">
 <main>
-    <form onchange="update()" id="f">Sort by:
-        <label><input type="radio" name="sort" value="recency" checked> Recency</label>
-        <label><input type="radio" name="sort" value="count"> Count</label>
+    <form onchange="update()" id="f"> Sort by:
+        <label><input type="radio" name="sort" value="selector"> Selector</label>
+        <label><input type="radio" name="sort" value="count" checked> Count</label>
+        <label><input type="radio" name="sort" value="daysSinceLast"> Days since last pick</label>
+        <label><input type="radio" name="sort" value="weeksSinceLast"> Weeks since last pick</label>
+        <label><input type="radio" name="sort" value="firstDate"> First date</label>
+        <label><input type="radio" name="sort" value="lastDate"> Last date</label>
     </form>
     <table id="selectors">
         <thead>
         <tr>
-            <th class="sortable" onclick="sortTable(1)">Selector</th>
-            <th class="num sortable" onclick="sortTable(2)">Count <span id="outof"></span></th>
-            <th class="num sortable" onclick="sortTable(3)">Days <span class="s">since last pick</span></th>
-            <th class="num sortable" onclick="sortTable(4)">Weeks <span class="s">since last pick</span></th>
+            <th onclick="setSort('selector')">Selector</th>
+            <th class="num" onclick="setSort('count')">Count <span id="outof"></span></th>
+            <th class="num" onclick="setSort('daysSinceLast')">Days <span class="s">since last pick</span></th>
+            <th class="num" onclick="setSort('weeksSinceLast')">Weeks <span class="s">since last pick</span></th>
         </tr>
         </thead>
         <tbody></tbody>
