@@ -1,3 +1,38 @@
+#GroupHugForFaberVortex
+Date: 2025-10-19
+
+01 Ramones - Do You Remember Rock 'n' Roll Radio (@simonlandmine)
+02 Led Zeppelin - Whole Lotta Love (@eryngium)
+03 Dirty Three - Obvious is Obvious (@soundclamp)
+04 Jake Holmes - Dazed And Confused (@avklaus)
+05 Sugar - Your Favorite Thing (@zbender)
+06 Rage Against The Machine - Township Rebellion (@kleptones)
+07 Bhundu Boys - Ring Of Fire (@vinomadic)
+08 Joe Cocker - With A Little Help From My Friends (@holette)
+09 Santana - Jungle Strut (@nessiest)
+10 Suicidal Tendencies - Go Skate! (Possessed To Skate '97) (@simonlandmine)
+11 Motorpsycho - The Nerve Tattoo (@soundclamp)
+12 Los Campesinos! - You! Me! Dancing! (@emmaprice)
+13 The The - Love Is Stronger Than Death (@corin_ja)
+14 Steely Dan - Deacon Blues (@nessiest)
+15 The Avalanches - Music Makes Me High (@emmaprice)
+16 Spirit - I Got A Line On You (Live 1984) (@holette)
+17 Ramones - I Wanna Be Sedated (@JimMcCauley)
+18 Booker T & The MG's - Hip Hug-Her (@accordionbruce)
+19 Jonathan Richman - I Was Just A Piece Of Frozen Sky (@saucer)
+20 Michael Hedges - All Along The Watchtower (@avklaus)
+21 Live - Heaven Wore A Shirt (@wbwolf)
+22 Delta Spirit - Devil Knows You're Dead (@akx)
+23 Tim Buckley - Morning Glory (@vinomadic)
+24 Norman Greenbaum - Skyline @iamwahl
+25 Parliament - The Silent Boatman (@david)
+26 Tori Amos - If 6 Was 9 (@woj)
+27 The Byrds - My Back Pages (@saucer)
+28 The Doors - Riders On The Storm (@corin_ja)
+29 Frank Zappa - Watermelon In Easter Hay (@woj)
+30 The Beatles - Abbey Road End Of Side 2 (@kleptones)
+31 Cat Stevens - If You Want to Sing Out, Sing Out (@iamwahl)
+
 #GamesDayVortex
 Date: 2025-09-28
 
@@ -334,7 +369,7 @@ Date: 2024-09-29
 10	ABBA - S(o)uper Trouper - @SimonLandmine
 11	Chic - Soup For One - @wbwolf@kind.social
 12	Françoise Hardy - Les Madeleines - @vinomadic@mastodon.social
-13	Bob Marley - Stir It Up - @eryngium 
+13	Bob Marley - Stir It Up - @eryngium
 14	Calypso Mama With The Lad Richards Orchestra - De Peas 'n' De Rice - @vinomadic@mastodon.social
 15	Martha and the Muffins - Echo Beach - @ogili
 16	Screaming Trees - Song of a Baker - @holette
@@ -2081,7 +2116,7 @@ Date: 2015-05-31
 18 Style Council - Walls Come Tumbling Down (@nessiest)
 
 #walkofshamevortex
- 
+
 01 The Like - Walk Of Shame (@jimmccauley)
 02 Herman's Hermits - I'm Into Something Good (@mutster101)
 03 Barenaked Ladies - Conventioneers
@@ -2244,14 +2279,14 @@ Intro, primal scream - loaded/speech gen/monster squad
 The Rat by the Walkmen @thejayarr
 The Big Come Down by Nine Inch Nails @mrhig
 Private First Class by Kevin Devine & The Goddamn Band @rougeforever
-River of Heaven by James Blackshaw @nessiest 
+River of Heaven by James Blackshaw @nessiest
 Someone You Use by Candi Staton @samsmitter
 Let's Do It A Dada by Einsturzende Neubauten @kleptones
 Wham City by Dan Deacon @JimMcCauley
 Handshaker by Martyn Bennett and Martin Lowe @mutster101
 Beside The Fountain by Handsomeboy Technique @akx
 TOODOO by Mr Oizo (feat. Carmen Castro) @jonnydapigg
-Velocet Vir Nesat by Eat Lights Become Lights @cdrose_writer 
+Velocet Vir Nesat by Eat Lights Become Lights @cdrose_writer
 Outro by oliver/george carlin
 Donkey by Los Beta @kleptones
 
@@ -2464,16 +2499,16 @@ Donkey by Los Beta @kleptones
 10 Mazzy Star - Lay Myself Down (@samsmitter)
 11 John Grant - GMF (@kleptones)
 12 The Strypes - You Can't Judge A Book By The Cover (@samsmitter)
-13 Nine Inch Nails - Came Back Haunted (@emmaprice) 
+13 Nine Inch Nails - Came Back Haunted (@emmaprice)
 14 CSS - Honey (@cakehugga)
 15 Lizzo feat. Sophie Eris - Batches and Cookies (@jimmccauley)
 16 Postmodern Juke Box (featuring Puddles Pity Party) - Royals (@rougeforever)
 17 Saint Pepsi - Cherry Pepsi (@akx)
 18 Rob Zombie - Theme for the Rat Vendor / Ging Gang Gong De Do Gong De Laga Raga (@pamac66)
 19 Kirby Krackle - North Of The Wall (@mutster101)
-20 James Blake - Retrograde (@holette) 
+20 James Blake - Retrograde (@holette)
 21 Jimmy Fallon, Miley Cyrus & The Roots - We Can't Stop (A Cappella) (@mrhig)
-22 Janelle Monae ft. Prince - Givin' Em What They Love (@eastvanhalen) 
+22 Janelle Monae ft. Prince - Givin' Em What They Love (@eastvanhalen)
 23 Tessela - Hackney Parrot (@kleptones)
 24 Serafina Steer - Disco Compilation (Jarvis Cocker Remix) (jimmccauley)
 25 Steve Mason & Emiliana Torrini - I Go Out (@thejayarr)
@@ -2555,7 +2590,7 @@ Donkey by Los Beta @kleptones
 09 The Twelves - Night Vision (klausdahlen)
 10 William Shatner - Common People (tibieryo)
 11 Johnny Cash - Hurt (emmaprice)
-12 Cristina - Is That All There Is? (cakehugga) 
+12 Cristina - Is That All There Is? (cakehugga)
 13 Schneider TM - The Light 3000 (jimmccauley)
 14 Nine Inch Nails - Get Down Make Love (mrhig)
 15 ??? - Eye Of The Tiger (jonnydapigg)
@@ -2570,7 +2605,7 @@ Donkey by Los Beta @kleptones
 00003 : FANG ISLAND - FANG ISLAND GO TO KINDERGARDEN // @neilpbardhan
 00004 : OK Go - Needing : Getting // @tibieryo
 00005 : GESAFFELSTEIN - PURSUIT // @Jayesofine
-00006 : The Cooper Temple Clause - Blind Pilots 
+00006 : The Cooper Temple Clause - Blind Pilots
 00007 : Baths - Lovely Bloodflow // @akx
 00008 : Kate Bush - Wow // @holette
 00009 : Cibo Matto - Sugar Water // @kleptones
