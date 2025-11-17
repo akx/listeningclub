@@ -9,5 +9,6 @@ Data for and from [the Listening Club project](https://thelisteningclub.blogspot
 
 ## UIs
 
+- See [the entries UI](https://akx.github.io/listeningclub/entries.html) to see what's been picked.
 - See [the selectors UI](https://akx.github.io/listeningclub/selectors.html) to see who's been picking things.
 - See [the artists UI](https://akx.github.io/listeningclub/artists.html) to see who's been featured.
