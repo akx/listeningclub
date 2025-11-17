@@ -1,269 +1,277 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes" />
     <title>#listeningclub selector search</title>
-</head>
-<script>
-  async function fetchSelectorsFromEntries() {
-    const tsv = await fetch("./entries.tsv");
-    const data = await tsv.text();
-    const results = [];
-    for (const row of data.split("\n")) {
-      if (!row.length || row.startsWith("Date\t") || row.startsWith("-\t")) {
-        continue;
+  </head>
+  <script>
+    async function fetchSelectorsFromEntries() {
+      const tsv = await fetch("./entries.tsv");
+      const data = await tsv.text();
+      const results = [];
+      for (const row of data.split("\n")) {
+        if (!row.length || row.startsWith("Date\t") || row.startsWith("-\t")) {
+          continue;
+        }
+        const [date, selector, album] = row.split("\t");
+        if (album.length < 2) {
+          continue;
+        }
+        if (
+          selector === "-" ||
+          selector.toLowerCase().startsWith("every") ||
+          selector === "VORTEX" ||
+          selector.toLowerCase().startsWith("holidays") ||
+          selector === "Closed"
+        ) {
+          continue;
+        }
+        results.push([selector.trim(), date]);
       }
-      const [date, selector, album] = row.split("\t");
-      if (album.length < 2) {
-        continue;
-      }
-      if (selector === "-" || selector.toLowerCase().startsWith("every") || selector === "VORTEX" || selector.toLowerCase().startsWith("holidays") || selector === "Closed") {
-        continue;
-      }
-      results.push([selector.trim(), date]);
+      return results;
     }
-    return results;
-  }
 
-  const aliases = {
-    "@101retstum": "@mutster101",
-    "@erimichkea": "@eryngium",
-    "@jimmmccauley": "@jimmccauley",
-    "@jonny_pigg": "@jonnydapigg",
-    "@ohmyliver": "@ogili",
-    "@samquitter": "@samsmitter",
-    "@wojsvenwoj": "@woj",
-    "@xpollen8": "@david",
-    "@zensolo": "@viNomadic",
-  }
-
-  function formatInteger(num) {
-    if (num.toLocaleString) {
-      return num.toLocaleString();
-    }
-    return String(num);
-  }
-
-  function getCanonicalName(selectorNameVariants, selector) {
-    const snv = selectorNameVariants.get(selector);
-    let max = 0;
-    let canonicalName = selector;
-    for (const [name, count] of snv) {
-      if (count > max) {
-        max = count;
-        canonicalName = name;
-      }
-    }
-    return canonicalName;
-  }
-
-  async function loadData() {
-    const selectors = new Map();
-    const selectorNameVariants = new Map();
-    const add = (selector, date) => {
-      const selectorLower = selector.toLowerCase();
-      if (!selectors.has(selectorLower)) {
-        selectors.set(selectorLower, new Set());
-        selectorNameVariants.set(selectorLower, new Map());
-      }
-      selectors.get(selectorLower).add(date);
-      const thisSnv = selectorNameVariants.get(selectorLower);
-      if (!thisSnv.has(selector)) {
-        thisSnv.set(selector, 0);
-      }
-      thisSnv.set(selector, thisSnv.get(selector) + 1);
+    const aliases = {
+      "@101retstum": "@mutster101",
+      "@erimichkea": "@eryngium",
+      "@jimmmccauley": "@jimmccauley",
+      "@jonny_pigg": "@jonnydapigg",
+      "@ohmyliver": "@ogili",
+      "@samquitter": "@samsmitter",
+      "@wojsvenwoj": "@woj",
+      "@xpollen8": "@david",
+      "@zensolo": "@viNomadic",
     };
-    for (const [selector, date] of await fetchSelectorsFromEntries()) {
-      add((aliases[selector.toLowerCase()] ?? selector).replaceAll("@", ""), date);
-    }
-    const selectorsByCanonicalName = new Map();
-    // Map `selectors` by choosing the most popular variant as the canonical name
-    for (const [selector, dates] of selectors) {
-      selectorsByCanonicalName.set(getCanonicalName(selectorNameVariants, selector), dates);
-    }
-    return selectorsByCanonicalName;
-  }
 
-  let selectors = new Map();
-
-  function createRows() {
-    const items = [];
-    let totalN = 0;
-    for (const [selector, dates] of selectors.entries()) {
-      const datesSorted = Array.from(dates).sort();
-      let lastDate = datesSorted[datesSorted.length - 1];
-      let firstDate = datesSorted[0];
-      let count = dates.size;
-      const msSinceLast = Date.now() - new Date(lastDate);
-      const daysSinceLast = Math.floor(msSinceLast / 1000 / 60 / 60 / 24);
-      const weeksSinceLast = Math.floor(daysSinceLast / 7);
-
-      const tr = document.createElement("tr");
-      const nameTd = document.createElement("td");
-      nameTd.textContent = selector;
-      tr.appendChild(nameTd);
-
-      const countTd = document.createElement("td");
-      countTd.classList.add("count", "num");
-      countTd.textContent = formatInteger(count);
-      tr.appendChild(countTd);
-
-      const daysSinceLastTd = document.createElement("td");
-      daysSinceLastTd.classList.add("days", "num");
-      daysSinceLastTd.textContent = formatInteger(daysSinceLast);
-      tr.appendChild(daysSinceLastTd);
-
-      const weeksSinceLastTd = document.createElement("td");
-      weeksSinceLastTd.classList.add("weeks", "num");
-      weeksSinceLastTd.textContent = formatInteger(weeksSinceLast);
-      tr.appendChild(weeksSinceLastTd);
-
-      Object.assign(tr.dataset, {lastDate, firstDate, daysSinceLast, weeksSinceLast, count, selector});
-      items.push(tr);
-      totalN += count;
-    }
-    document.getElementById("outof").textContent = `out of ${formatInteger(totalN)}`;
-    return items;
-  }
-
-  function update() {
-    const sortOrder = document.querySelector("input[name=sort]:checked").value;
-    const tbody = document.querySelector("#selectors tbody");
-    let items = Array.from(tbody.querySelectorAll("tr"));
-    if (!items.length) items = createRows();
-
-    items.sort((a, b) => {
-      const ka = a.dataset[sortOrder];
-      const kb = b.dataset[sortOrder];
-      if (sortOrder === "count" || sortOrder === "daysSinceLast" || sortOrder === "weeksSinceLast") {
-        let val = (0 | ka) - (0 | kb);
-        if (sortOrder === "count") val = -val; // "DWIM" for count
-        return val;
+    function formatInteger(num) {
+      if (num.toLocaleString) {
+        return num.toLocaleString();
       }
-      return String(ka).localeCompare(String(kb));
-    });
-    for (const li of items) {
-      tbody.appendChild(li);
+      return String(num);
     }
-  }
 
-  function setSort(sort) {
-    document.querySelector(`input[name=sort][value=${sort}]`).checked = true;
-    update();
-  }
+    function getCanonicalName(selectorNameVariants, selector) {
+      const snv = selectorNameVariants.get(selector);
+      let max = 0;
+      let canonicalName = selector;
+      for (const [name, count] of snv) {
+        if (count > max) {
+          max = count;
+          canonicalName = name;
+        }
+      }
+      return canonicalName;
+    }
 
-  function checkTardiness() {
-    let latestDate = null;
-    for (const [_, dates] of selectors.entries()) {
-      for (const date of dates) {
-        if (!latestDate || date.localeCompare(latestDate) > 0) {
-          latestDate = date;
+    async function loadData() {
+      const selectors = new Map();
+      const selectorNameVariants = new Map();
+      const add = (selector, date) => {
+        const selectorLower = selector.toLowerCase();
+        if (!selectors.has(selectorLower)) {
+          selectors.set(selectorLower, new Set());
+          selectorNameVariants.set(selectorLower, new Map());
+        }
+        selectors.get(selectorLower).add(date);
+        const thisSnv = selectorNameVariants.get(selectorLower);
+        if (!thisSnv.has(selector)) {
+          thisSnv.set(selector, 0);
+        }
+        thisSnv.set(selector, thisSnv.get(selector) + 1);
+      };
+      for (const [selector, date] of await fetchSelectorsFromEntries()) {
+        add((aliases[selector.toLowerCase()] ?? selector).replaceAll("@", ""), date);
+      }
+      const selectorsByCanonicalName = new Map();
+      // Map `selectors` by choosing the most popular variant as the canonical name
+      for (const [selector, dates] of selectors) {
+        selectorsByCanonicalName.set(getCanonicalName(selectorNameVariants, selector), dates);
+      }
+      return selectorsByCanonicalName;
+    }
+
+    let selectors = new Map();
+
+    function createRows() {
+      const items = [];
+      let totalN = 0;
+      for (const [selector, dates] of selectors.entries()) {
+        const datesSorted = Array.from(dates).sort();
+        let lastDate = datesSorted[datesSorted.length - 1];
+        let firstDate = datesSorted[0];
+        let count = dates.size;
+        const msSinceLast = Date.now() - new Date(lastDate);
+        const daysSinceLast = Math.floor(msSinceLast / 1000 / 60 / 60 / 24);
+        const weeksSinceLast = Math.floor(daysSinceLast / 7);
+
+        const tr = document.createElement("tr");
+        const nameTd = document.createElement("td");
+        nameTd.textContent = selector;
+        tr.appendChild(nameTd);
+
+        const countTd = document.createElement("td");
+        countTd.classList.add("count", "num");
+        countTd.textContent = formatInteger(count);
+        tr.appendChild(countTd);
+
+        const daysSinceLastTd = document.createElement("td");
+        daysSinceLastTd.classList.add("days", "num");
+        daysSinceLastTd.textContent = formatInteger(daysSinceLast);
+        tr.appendChild(daysSinceLastTd);
+
+        const weeksSinceLastTd = document.createElement("td");
+        weeksSinceLastTd.classList.add("weeks", "num");
+        weeksSinceLastTd.textContent = formatInteger(weeksSinceLast);
+        tr.appendChild(weeksSinceLastTd);
+
+        Object.assign(tr.dataset, { lastDate, firstDate, daysSinceLast, weeksSinceLast, count, selector });
+        items.push(tr);
+        totalN += count;
+      }
+      document.getElementById("outof").textContent = `out of ${formatInteger(totalN)}`;
+      return items;
+    }
+
+    function update() {
+      const sortOrder = document.querySelector("input[name=sort]:checked").value;
+      const tbody = document.querySelector("#selectors tbody");
+      let items = Array.from(tbody.querySelectorAll("tr"));
+      if (!items.length) items = createRows();
+
+      items.sort((a, b) => {
+        const ka = a.dataset[sortOrder];
+        const kb = b.dataset[sortOrder];
+        if (sortOrder === "count" || sortOrder === "daysSinceLast" || sortOrder === "weeksSinceLast") {
+          let val = (0 | ka) - (0 | kb);
+          if (sortOrder === "count") val = -val; // "DWIM" for count
+          return val;
+        }
+        return String(ka).localeCompare(String(kb));
+      });
+      for (const li of items) {
+        tbody.appendChild(li);
+      }
+    }
+
+    function setSort(sort) {
+      document.querySelector(`input[name=sort][value=${sort}]`).checked = true;
+      update();
+    }
+
+    function checkTardiness() {
+      let latestDate = null;
+      for (const [_, dates] of selectors.entries()) {
+        for (const date of dates) {
+          if (!latestDate || date.localeCompare(latestDate) > 0) {
+            latestDate = date;
+          }
+        }
+      }
+      if (latestDate) {
+        const msSinceLatest = Date.now() - new Date(latestDate);
+        const daysSinceLatest = Math.floor(msSinceLatest / 1000 / 60 / 60 / 24);
+        if (daysSinceLatest > 7) {
+          let tardiv = document.getElementById("tardiness");
+          tardiv.textContent = `Data last updated ${daysSinceLatest} days ago.`;
+          tardiv.hidden = false;
         }
       }
     }
-    if (latestDate) {
-      const msSinceLatest = Date.now() - new Date(latestDate);
-      const daysSinceLatest = Math.floor(msSinceLatest / 1000 / 60 / 60 / 24);
-      if (daysSinceLatest > 7) {
-        let tardiv = document.getElementById("tardiness");
-        tardiv.textContent = `Data last updated ${daysSinceLatest} days ago.`;
-        tardiv.hidden = false;
-      }
-    }
-  }
 
-  async function init() {
-    selectors = await loadData();
-    update();
-    checkTardiness();
-  }
-</script>
-<style>
+    async function init() {
+      selectors = await loadData();
+      update();
+      checkTardiness();
+    }
+  </script>
+  <style>
     * {
-        box-sizing: border-box;
+      box-sizing: border-box;
     }
 
     body {
-        font-family: sans-serif;
-        font-size: 12pt;
-        line-height: 1.5;
+      font-family: sans-serif;
+      font-size: 12pt;
+      line-height: 1.5;
     }
 
     main {
-        max-width: 60em;
-        margin: auto;
+      max-width: 60em;
+      margin: auto;
     }
 
     form {
-        margin-bottom: 1em;
+      margin-bottom: 1em;
     }
 
     table {
-        width: 100%;
-        border-collapse: collapse;
+      width: 100%;
+      border-collapse: collapse;
     }
 
-    td, th {
-        border-bottom: #eee solid 1px;
-        padding: 0.2em;
+    td,
+    th {
+      border-bottom: #eee solid 1px;
+      padding: 0.2em;
     }
 
-    tr:hover td, th:hover {
-        background-color: #f8f8f8;
+    tr:hover td,
+    th:hover {
+      background-color: #f8f8f8;
     }
 
     .num {
-        text-align: right;
-        font-variant: tabular-nums;
+      text-align: right;
+      font-variant: tabular-nums;
     }
 
     th {
-        vertical-align: bottom;
-        cursor: pointer;
-        text-align: left;
+      vertical-align: bottom;
+      cursor: pointer;
+      text-align: left;
     }
 
     #outof {
-        display: block;
-        font-size: 80%;
+      display: block;
+      font-size: 80%;
     }
 
     th span.s {
-        display: block;
-        font-size: 80%;
+      display: block;
+      font-size: 80%;
     }
 
     #tardiness {
-        padding: 0.5em;
-        border: 1px solid darkorange;
-        margin-bottom: 0.5em;
-        text-align: center;
+      padding: 0.5em;
+      border: 1px solid darkorange;
+      margin-bottom: 0.5em;
+      text-align: center;
     }
-
-</style>
-<body onload="init()">
-<main>
-    <div id="tardiness" hidden></div>
-    <form onchange="update()" id="f"> Sort by:
-        <label><input type="radio" name="sort" value="selector"> Selector</label>
-        <label><input type="radio" name="sort" value="count" checked> Count</label>
-        <label><input type="radio" name="sort" value="daysSinceLast"> Days since last pick</label>
-        <label><input type="radio" name="sort" value="weeksSinceLast"> Weeks since last pick</label>
-        <label><input type="radio" name="sort" value="firstDate"> First date</label>
-        <label><input type="radio" name="sort" value="lastDate"> Last date</label>
-    </form>
-    <table id="selectors">
+  </style>
+  <body onload="init()">
+    <main>
+      <div id="tardiness" hidden></div>
+      <form onchange="update()" id="f">
+        Sort by:
+        <label><input type="radio" name="sort" value="selector" /> Selector</label>
+        <label><input type="radio" name="sort" value="count" checked /> Count</label>
+        <label><input type="radio" name="sort" value="daysSinceLast" /> Days since last pick</label>
+        <label><input type="radio" name="sort" value="weeksSinceLast" /> Weeks since last pick</label>
+        <label><input type="radio" name="sort" value="firstDate" /> First date</label>
+        <label><input type="radio" name="sort" value="lastDate" /> Last date</label>
+      </form>
+      <table id="selectors">
         <thead>
-        <tr>
+          <tr>
             <th onclick="setSort('selector')">Selector</th>
             <th class="num" onclick="setSort('count')">Count <span id="outof"></span></th>
             <th class="num" onclick="setSort('daysSinceLast')">Days <span class="s">since last pick</span></th>
             <th class="num" onclick="setSort('weeksSinceLast')">Weeks <span class="s">since last pick</span></th>
-        </tr>
+          </tr>
         </thead>
         <tbody></tbody>
-    </table>
-</main>
-</body>
+      </table>
+    </main>
+  </body>
 </html>
